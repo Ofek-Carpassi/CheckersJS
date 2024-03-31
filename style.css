@@ -1,0 +1,87 @@
+/* The 'body' selector targets the entire body of the HTML document. */
+body {
+    /* The 'background-color' property sets the background color of the body to white. */
+    background-color: #ffffff;
+}
+
+/* The 'p' selector targets all paragraph elements in the HTML document. */
+p {
+    /* The 'text-align' property aligns the text in the center of the paragraph. */
+    text-align: center;
+}
+
+/* The '#Reset-Button-Container' selector targets the HTML element with the id 'Reset-Button-Container'. */
+#Reset-Button-Container {
+    /* The 'height' property sets the height of the element to 120px. */
+    height: 120px;
+    /* The 'position' property sets how the element is positioned. 'relative' means it's positioned relative to its normal position. */
+    position: relative;
+}
+
+/* The '#Center' selector targets the HTML element with the id 'Center'. */
+#Center {
+    /* The 'margin' property sets the margins around the element. '0' means no margins. */
+    margin: 0;
+    /* The 'position' property sets how the element is positioned. 'absolute' means it's positioned relative to the nearest positioned ancestor. */
+    position: absolute;
+    /* The 'top' and 'left' properties position the element 50% from the top and left of its container. */
+    top: 50%;
+    left: 50%;
+    /* The 'transform' property applies a 2D or 3D transformation to the element. 'translate(-50%, -50%)' moves the element left and up by half its width and height, centering it. */
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/* The '#Reset-Game' selector targets the HTML element with the id 'Reset-Game'. */
+#Reset-Game {
+    /* The 'font-size' property sets the size of the text in the element. */
+    font-size: 28px;
+    /* The 'padding' property sets the space between the content of the element and its border. */
+    padding: 15px 40px;
+    /* The 'border-radius' property rounds the corners of the element's border. */
+    border-radius: 30px;
+    /* The 'border' property sets the border of the element. 'none' means no border. */
+    border: none;
+    /* The 'cursor' property changes the cursor that's displayed when you hover over the element. 'pointer' changes it to a hand, indicating a clickable area. */
+    cursor: pointer;
+    /* The 'background-color' property sets the background color of the element. */
+    background-color: rgb(0, 0, 255);
+    /* The 'color' property sets the color of the text in the element. */
+    color: white;
+    /* The 'align-self' property aligns the element along the cross-axis of the current line. 'center' centers the element. */
+    align-self: center;
+}
+
+/* The '#Reset-Game:hover' selector targets the HTML element with the id 'Reset-Game' when it's being hovered over. */
+#Reset-Game:hover {
+    /* The 'border-radius' property rounds the corners of the element's border. */
+    border-radius: 40px;
+    /* The 'background-color' property sets the background color of the element. */
+    background-color: rgb(0, 119, 255);
+}
+
+/* The 'table' selector targets all table elements in the HTML document. */
+table {
+    /* The 'border-collapse' property sets whether the table borders are collapsed into a single border or detached. 'collapse' collapses the borders. */
+    border-collapse: collapse;
+    /* The 'margin' property sets the margins around the element. 'auto' horizontally centers the element if it has a specified width. */
+    margin: auto;
+}
+
+/* The 'td' selector targets all table data cells in the HTML document. */
+td {
+    /* The 'width' and 'height' properties set the width and height of the cells. */
+    width: 60px;
+    height: 60px;
+    /* The 'border' property sets the border of the cells. */
+    border: 4px solid black;
+    /* The 'text-align' property aligns the text in the center of the cells. */
+    text-align: center;
+}
+
+/* The 'img' selector targets all image elements in the HTML document. */
+img{
+    /* The 'width' and 'height' properties set the width and height of the images. */
+    width: 40px;
+    height: 40px;
+}
