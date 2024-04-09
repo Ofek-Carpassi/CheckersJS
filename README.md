@@ -37,6 +37,7 @@ The `checkWin` function is used to determine when a player has won. <br>
 - Add sound effects.
 - Add a timer for each player's turn.
 - Add a tutorial for new players.
+- Add a king piece that can move in any direction.
 
 ## Contributing
 Feel free to contribute to this project. <br>
