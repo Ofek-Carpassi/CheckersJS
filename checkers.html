@@ -3,13 +3,16 @@
     <head>
         <meta charset="utf-8" />
         <title>Checkers Game</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" id="style" href="style.css">
     </head>
-    <body>
-        <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 60px;">It is <span id="player"></span>'s turn.</p>
-        <div id="gameboard"></div>
-        <p id="info-display"></p>
-
+        <body>
+            <p id='parPlayer' style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 60px;">It is <span id="player"></span>'s turn.</p>
+            <div id="gameboard"></div>
+            <p id="info-display"></p>
+            <div id="button-container">
+                <button id="Reset-Game" onclick="resetGame()">Reset</button>
+                <button id="theme" onclick="switchTheme()">Change Theme</button>
+            </div>
         <script src="checkers.js"></script>
     </body>
 </html>

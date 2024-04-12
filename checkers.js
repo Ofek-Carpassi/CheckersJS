@@ -50,28 +50,23 @@ function BuildBoard() {
         for (var c = 0; c < cols; c++) {
             // Alternate the cell color
             if ((r + c) % 2 == 0)
-                strToShow += "<td style='background-color:black'  width='60' height='60' id=" + numToShow.toString() + "  ondrop='drop(event)' ondragover='allowDrop(event)'>";
+                strToShow += "<td class = 'blackSquares' id=" + numToShow.toString() + "  ondrop='drop(event)' ondragover='allowDrop(event)'>";
             else
-                strToShow += "<td style='background-color:white'  width='60' height='60' id=" + numToShow.toString() + " ondrop='drop(event)' ondragover='allowDrop(event)'>";
+                strToShow += "<td class = 'whiteSquares' id=" + numToShow.toString() + " ondrop='drop(event)' ondragover='allowDrop(event)'>";
             // Add the pieces to the board
             if (pieces[r][c] == 'o')
-                strToShow += "<img src ='" + img[0].toString() + "' draggable='true' ondragstart='drag(event)' id='drag" + numToShow.toString() + "'>";
+                strToShow += "<img src ='" + img[0].toString() + "' draggable='true' ondragstart='drag(event)' class = 'blackPiece' id='drag" + numToShow.toString() + "'>";
             if (pieces[r][c] == 'x') 
-                strToShow += "<img src ='" + img[1].toString() + "' draggable='true' ondragstart='drag(event)' id='drag" + numToShow.toString() + "'>";
+                strToShow += "<img src ='" + img[1].toString() + "' draggable='true' ondragstart='drag(event)' class = 'whitePiece' id='drag" + numToShow.toString() + "'>";
             if(pieces[r][c] == 'O') 
-                strToShow += "<img src ='" + img[2].toString() + "' draggable='true' ondragstart='drag(event)' id='drag" + numToShow.toString() + "'>";
+                strToShow += "<img src ='" + img[2].toString() + "' draggable='true' ondragstart='drag(event)' class = 'blackPiece' id='drag" + numToShow.toString() + "'>";
             if(pieces[r][c] == 'X')
-                strToShow += "<img src ='" + img[3].toString() + "' draggable='true' ondragstart='drag(event)' id='drag" + numToShow.toString() + "'>";
+                strToShow += "<img src ='" + img[3].toString() + "' draggable='true' ondragstart='drag(event)' class = 'whitePiece' id='drag" + numToShow.toString() + "'>";
             strToShow += "</td>";
             numToShow++;
         }
     }
     strToShow += "</tr></table>";
-    strToShow += "<div id = \"Reset-Button-Container\">";
-    strToShow += "<div id = \"Center\">";
-    strToShow += "<button onclick=\"resetGame()\" id = \"Reset-Game\">Reset Game</button>"
-    strToShow += "</div>"
-    strToShow += "</div>"
     // Update the game board display
     document.getElementById("gameboard").innerHTML = strToShow;
     // Check if the game is over
@@ -265,10 +260,10 @@ function checkWin() {
     for (var r = 0; r < rows; r++) {
         for (var c = 0; c < cols; c++) {
             if (pieces[r][c] == 'x' || pieces[r][c] == 'X') {
-                blackPieces++;
+                whitePieces++;
             }
             if (pieces[r][c] == 'o' || pieces[r][c] == 'O') {
-                whitePieces++;
+                blackPieces++;
             }
         }
     }
@@ -280,5 +275,19 @@ function checkWin() {
     if (whitePieces == 0) {
         alert("Black wins!");
         resetGame();
+    }
+}
+
+function switchTheme()
+{
+    var stylesheet = document.getElementById("style");
+    
+    if(stylesheet.getAttribute("href") == "style.css")
+    {
+        stylesheet.setAttribute("href", "darkTheme.css");
+    }
+    else
+    {
+        stylesheet.setAttribute("href", "style.css");
     }
 }
