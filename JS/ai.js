@@ -50,9 +50,8 @@ function minimax(board, depth, isMaximizingPlayer, alpha, beta) {
             const [score, _] = minimax(makeMove(board, i, j, 'x'), depth - 1, false, alpha, beta);
             bestScore = Math.max(bestScore, score);
             alpha = Math.max(alpha, bestScore);
-            if (beta <= alpha) {
+            if (beta <= alpha)
               break;
-            }
           }
         }
       }
