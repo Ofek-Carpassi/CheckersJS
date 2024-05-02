@@ -17,15 +17,14 @@ function evaluate(board) {
   
     for (let i = 0; i < rows; i++) {
       for (let j = 0; j < cols; j++) {
-        if (board[i][j] === 'x') {
+        if (board[i][j] === 'x')
           whiteScore++;
-        } else if (board[i][j] === 'o') {
+        else if (board[i][j] === 'o')
           blackScore++;
-        } else if (board[i][j] === 'X') {
+        else if (board[i][j] === 'X')
           whiteScore += 2;
-        } else if (board[i][j] === 'O') {
+        else if (board[i][j] === 'O')
           blackScore += 2;
-        }
       }
     }
   
@@ -34,9 +33,8 @@ function evaluate(board) {
 
 function minimax(board, depth, isMaximizingPlayer, alpha, beta) {
     // Base case: if the game is over or the maximum depth is reached
-    if (depth === 0 || checkWin(board)) {
+    if (depth === 0 || checkWin(board))
       return [evaluate(board), null];
-    }
   
     // Initialize the best score and the best move
     let bestScore, bestMove;
